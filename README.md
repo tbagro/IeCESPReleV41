@@ -28,3 +28,8 @@ SCHEDULE SYSTEM FUNCTIONS
 *   DH16:30             - set On daily at 16:30
 *   IH00:30             - set Off after being On for 30 minutes
 *   IL00:10             - set On after being Off for 10 minutes
+
+
+
+Baseado na série do canal do Youtube Internet e Coisas https://www.youtube.com/watch?v=7cPNXacg0bQ&t=27s
+
