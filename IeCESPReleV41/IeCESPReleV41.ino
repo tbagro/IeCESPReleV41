@@ -561,17 +561,14 @@ void loop() {
     }
   }
 
+   s = scheduleChk(schedule, RELAY_PIN);
 
-  //falta uma função para ativar ou não o agendamento - colocar aqui
-  if (CFG_AG_ALLWAYS_ON == true) {
-    // Schedule Check
-    s = scheduleChk(schedule, RELAY_PIN);
+  if ((AgOn() == 1 ) && (s != "")) {
+    // Schedule Check 
 
-    if (s != "") {
-      // Event detected
-      lastEvent = (digitalRead(RELAY_PIN) ? "Ligado " : "Desligado ") +
-                  s + " - " + dateTimeStr(now());
-      log(F("Agendamento"), lastEvent);
-    }
+    // Event detected
+    lastEvent = (digitalRead(RELAY_PIN) ? "Ligado " : "Desligado ") +
+                s + " - " + dateTimeStr(now());
+    log(F("Agendamento"), lastEvent);
   }
 }
